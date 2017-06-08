@@ -1,0 +1,9 @@
+1. Add "main.aot.ts" to "exclude" in src/tsconfig.app.json
+	ERROR in C:/demo/src/main.aot.ts (4,36): Cannot find module '../src/app/app.module.ngfactory'
+2. Size of non-aot files
+3. With files/contents specified in angular docs(https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), run aot build and get this error.
+	Tried to find bootstrap code, but could not. Specify either statically analyzable bootstrap code or pass in an entryModule to the plugins options.
+   Add "entryModule": "app/app.module#AppModule" to "angularCompilerOptions" in tsconfig.aot.json
+4. Change "genDir": "aot" to "genDir": "" in tsconfig.aot.json
+5. Size of aot files
+	Notice difference: their documentation says it does tree-shaking(https://github.com/angular/angular-cli/wiki/build#bundling--tree-shaking)

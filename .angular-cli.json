@@ -5,6 +5,7 @@
   },
   "apps": [
     {
+      "name": "dev",
       "root": "src",
       "outDir": "dist",
       "assets": [
@@ -16,6 +17,31 @@
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "aot",
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.aot.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.aot.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
@@ -43,6 +69,9 @@
     },
     {
       "project": "e2e/tsconfig.e2e.json"
+    },
+    {
+      "project": "src/tsconfig.aot.json"
     }
   ],
   "test": {
